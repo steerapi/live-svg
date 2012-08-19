@@ -1,0 +1,148 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title livecoding
+    meta(name='description', content="livecoding is an interactive sketchpad. Code modifications are instantly displayed - no need to refresh your browser. Click on a number, adjust its value via the popup slider, and watch your work change on the fly! 100% totally based on Bret Victor's Inventing on Principle talk.")
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='js/libs/codemirror/codemirror.css')
+    link(rel='stylesheet', href='js/libs/codemirror/theme/lesser-dark.css')
+    link(rel='stylesheet', href='css/jquery.miniColors.css')
+    script(src='js/libs/modernizr-2.5.3.min.js')
+    script(type='text/javascript')
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33254903-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  body
+    #popup
+      .container
+        .close x
+        .about.containerItem(rel='08122013')
+          p
+            span livecoding
+            | is a live coding sketchpad in d3. Code modifications are instantly displayed - no need to refresh your browser. Click a number, adjust its value via the popup slider, and watch your work change on the fly!
+          h3 Updates
+          p Aug 13, 2012
+          ul
+            li
+              span new:
+              | added introduction screen
+            li
+              span new:
+              | added resolution switcher
+            li
+              span new:
+              | added HTML mode
+          p Aug 8, 2012
+          ul
+            li show save confirmation
+            li bug fixes
+          p Jul 25, 2012
+          ul
+            li added ability to save under GitHub username
+          a(href='https://github.com/gabrielflorit/livecoding/commits/master', target='_blank') more
+    #browsermessage
+      | Our sincerest apologies!
+      span livecoding
+      | doesn't support your browser. We're
+      a(href='https://github.com/gabrielflorit/livecoding/issues') working
+      | on it - in the meantime,
+      a(href='http://www.google.com/chrome') please switch to Chrome
+      | .
+    #main(role='main')
+      //
+         slider elements 
+      #slider
+        #marker
+        #handle
+          #ball
+        #bar
+          #filler
+        #triangle
+      #controls
+        #header livecoding
+        #menu
+          .item
+            h2.user  
+            ul
+              li login
+          .item
+            h2 file
+            ul
+              li new
+              li.disabled save
+              li save anonymously
+          .item
+            h2 examples
+            ul
+              li(rel='3343726') chord diagram
+              li(rel='3343730') particles
+              li(rel='3343733') circles
+              li(rel='3334989') bar chart
+              li(rel='3343738') scatter plot
+          .item
+            h2 view
+            ul
+          .item
+            h2 resolution
+            ul
+              li.disabled reset
+              li(rel='320x480') 320 x 480 (iPhone, vertical)
+              li(rel='480x320') 480 x 320 (iPhone, horizontal)
+              li(rel='600x768') 600 x 768 (iPad, vertical)
+              li(rel='768x600') 768 x 600 (iPad, horizontal)
+          .item
+            h2 help
+            ul
+              li about
+              li source code
+              li contact
+          .item
+            a#gist(href='', target='_blank')
+            span.dirty
+            span.save-confirmation
+        #modes
+        #message
+          | click number and press
+          span.key
+      #editor
+        #display
+          img#top-middle(src='img/top-middle.png')
+          img#bottom-middle(src='img/bottom-middle.png')
+          #middle-edge
+          #iframeContainer
+        img#top-right-corner(src='img/top-right-corner.png')
+        img#bottom-right-corner(src='img/bottom-right-corner.png')
+        img#top-left-corner(src='img/top-left-corner.png')
+        img#bottom-left-corner(src='img/bottom-left-corner.png')
+        #top-edge
+        #right-edge
+        #bottom-edge
+        #left-edge
+        #code
+        #codeOverlay
+      input#hidden-miniColors(type='hidden')
+    footer
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script
+      window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\\/script>')
+    script(src='js/libs/codemirror/codemirror.js')
+    script(src='js/libs/codemirror/loadmode.js')
+    script(src='js/libs/codemirror/mode/javascript.js')
+    script(src='js/libs/codemirror/mode/css.js')
+    script(src='js/libs/codemirror/mode/xml.js')
+    script(src='js/libs/codemirror/mode/htmlmixed.js')
+    script(src='js/libs/d3.v2.min.js')
+    script(src='js/libs/jquery-ui-1.8.20.custom.min.js')
+    script(src='js/libs/underscore.min.js')
+    script(src='js/libs/browserDetect.js')
+    script(src='js/libs/jquery.miniColors.min.js')
+    script(src='js/plugins.js')
+    script(src='js/script.js')

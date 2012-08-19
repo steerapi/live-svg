@@ -1,0 +1,29 @@
+!!! 5
+head
+    meta(charset='utf-8')
+    title livecoding
+    script
+      var livecoding = (function () {
+      return {
+      json: null,
+      renderCode: function(code) {
+      try { eval(code); }
+      catch (error) {
+      console.log(error);
+      }
+      finally {}
+      }
+      }
+      }());
+      window.onload = function() {
+      parent.aigua.iframeLoaded();
+      }
+    style
+    style#style
+    link(rel='stylesheet', href='css/iframe.css')
+  body
+    #livecoding-main
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script
+      window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\\/script>')
+    script(src='js/libs/d3.v2.min.js')
